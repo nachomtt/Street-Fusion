@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetFusion</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <header id="top">
+            <nav class="centerFlex">
+                <div class="search-nav">
+                    <input type="text" name="search-input" id="search-input" class="hidden">
+                    <button id="search-btn">
+                        <img src="./assets/img/icons/m-glass.png" alt="">
+                    </button>
+                </div>
+                <img class="logo" src="./assets/img/extra/logo.png" alt="">
+                <img class="logo-extended" src="./assets/img/extra/logo2.png" alt="">
+                <div class="side-nav centerFlex">
+                    <a href="./index.html">Home</a>
+                    <a href="#products">Products</a>
+                    <button class="account-btn">
+                    </button>
+                    <button class="cart-btn">
+                        <p class="cart-btn-counter">1</p>
+                    </button>
+                </div>
+                <div class="menu-btn-container centerFlex">
+                    <button class="menu-btn">
+                        <img src="./assets/img/icons/menuIco.png" alt="">
+                    </button>
+                </div>
+
+            </nav>
+            <div class="menu-container hidden">
+                <button class="close-menu-btn">X</button>
+                <div class="menu-list">
+                    <a href="./index.html">Home</a>
+                    <a href="#products">Products</a>
+                    <button class="account-btn">
+                        Account
+                    </button>
+                    <button class="cart-btn"><span id="menu-bag-counter">(123)</span>
+                        Shopping Bag
+                    </button>
+                </div>
+            </div>
+            <div class="account-container hidden">
+                <button class="close-account-btn">X</button>
+                <p>Login</p>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass">
+                <button class="account-login-btn">Continue</button>
+                <a href="">Register</a>
+            </div>
+            <div class="cart-container hidden">
+                <div class="cart-top centerFlex">
+                    <button class="cart-close-btn">X</button>
+                    <p class="cart-top-title">SHOPPING BAG</p>
+                    <p class="cart-top-items">(<span id="cart-total-qty">0</span>) ITEMS</p>
+                </div>
+                <div class="cart-product-list">
+                </div>
+                <div class="cart-bottom">
+                    <p>SUBTOTAL: $<span id="subtotal">0</span></p>
+                    <div>
+                        <button class="clear-cart-btn">CLEAR</button>
+                        <button class="checkout-button">CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <section class="home centerFlex" id="home">
+            <img src="./assets/img/extra/hotSaleBanner.jpg" alt="Banner Image" class="banner">
+            <div class="best-sellers">
+                <h2>Best Sellers</h2>
+                <div class="best-prods-container centerFlex">
+                </div>
+            </div>
+            <div class="categories">
+                <h2>Categories</h2>
+                <div class="categories-container centerFlex">
+                    <button class="category-btn" data-category="all"></button>
+                    <button class="category-btn" data-category="hat"></button>
+                    <button class="category-btn" data-category="hoodie"></button>
+                    <button class="category-btn hidden" data-category="jacket"></button>
+                    <button class="category-btn" data-category="tshirt"></button>
+                    <button class="category-btn" data-category="pants"></button>
+                    <button class="category-btn" data-category="shoes"></button>
+                </div>
+            </div>
+            <div class="category-products" id="products">
+                <h2 class="category-title">Hoodies</h2>
+                <div class="products-container centerFlex">
+
+                </div>
+                <button id="see-more">View more</button>
+            </div>
+
+            </div>
+        </section>
+        <div class="product-info-container hidden">
+            <div class="product-info-img-container">
+                <img src="./assets/img/tshirts/2.jpg" alt="" class="product-info-img">
+            </div>
+            <div class="product-info">
+                <h2 id="product-info-type">Hoodies</h2>
+                <p id="product-info-title" class="product-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo dolores
+                    repellat magnam nesciunt quaerat </p>
+                <p id="product-info-price" class="product-price">$70</p>
+                <div class="add-cart">
+                    <div class="quantity-selector">
+                        <button class="quantity-minus" id="info-minus">-</button>
+                        <input class="quantity-display" id="info-display" min="1" value="1"></input>
+                        <button class="quantity-plus" id="info-plus">+</button>
+                    </div>
+                    <button class="add-cart-btn" id="add-cart-btn">ADD TO CART</button>
+                </div>
+                <p><span class="stock">3</span> Units available in stock</p>
+                <div class="product-description">
+                    <p>Description</p>
+                    <p class="p-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda amet
+                        quisquam quibusdam recusandae ipsam omnis nihil. Perspiciatis consequatur exercitationem
+                        dolores, doloribus consectetur, voluptate vel cum soluta in illo voluptas obcaecati. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Tempora asperiores, dicta animi fuga mollitia a ea
+                        adipisci! Soluta perspiciatis voluptas optio iusto non, debitis dolores eius quidem magnam,
+                        velit cumque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi enim quod nulla
+                        fugit amet optio, pariatur non adipisci numquam veniam in voluptatibus, libero quos earum
+                        voluptate asperiores impedit perferendis? Harum!</p>
+                </div>
+            </div>
+            <button class="close-window">X</button>
+        </div>
+        <footer class="centerFlex">
+            <p>Ignacio Mattiauda.</p>
+            <a href="https://www.wa.link/1q1hjh" class="contact-whatsapp"></a>
+            <a href="mailto:naccho.mattiauda@gmail.com" class="contact-email"></a>
+        </footer>
+    </main>
+    <script src="./scripts/products.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
