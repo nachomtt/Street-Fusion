@@ -193,6 +193,10 @@ const infoQty = (type) => {
 const setLocal = (value) => localStorage.setItem("bag", JSON.stringify(value));
 const getLocal = () => JSON.parse(localStorage.getItem("bag"));
 
+if(getLocal() === null){
+  setLocal([])
+}
+
 const cartCreate = (i) => {
   const { id, image, type, title, price } = products.find(
     (e) => e.id == getLocal()[i].id
